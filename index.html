@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>WALLETKU - Dompet Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#home" class="brand">
+      <span class="brand-icon">W</span>
+      <span>WALLET<span class="brand-light">KU</span></span>
+    </a>
+    <button class="profile" aria-label="Profil">RK</button>
+  </header>
+
+  <main class="container" id="home">
+
+    <section class="welcome">
+      <div>
+        <p class="muted">Selamat malam,</p>
+        <h1>Halo, Ryhan! 👋</h1>
+        <p class="muted">Kelola uangmu dengan lebih mudah.</p>
+      </div>
+      <div class="avatar">RK</div>
+    </section>
+
+    <section class="balance-card">
+      <div class="balance-top">
+        <span>Saldo WalletKu</span>
+        <button id="toggleBalance" class="eye-btn"
+                aria-label="Sembunyikan saldo">◉</button>
+      </div>
+
+      <h2 id="balance">Rp 2.500.000</h2>
+      <p class="card-caption">Saldo tersedia</p>
+
+      <div class="card-bottom">
+        <div>
+          <small>Nomor akun demo</small>
+          <p>•••• •••• 2026</p>
+        </div>
+        <span class="card-logo">W</span>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <button class="action" data-action="topup">
+        <span class="action-icon purple">＋</span>
+        <span>Top Up</span>
+      </button>
+      <button class="action" data-action="transfer">
+        <span class="action-icon blue">➤</span>
+        <span>Transfer</span>
+      </button>
+      <button class="action" data-action="pay">
+        <span class="action-icon orange">▦</span>
+        <span>Bayar</span>
+      </button>
+      <button class="action" data-action="history">
+        <span class="action-icon green">↻</span>
+        <span>Riwayat</span>
+      </button>
+    </section>
+
+    <section class="promo">
+      <div>
+        <span class="promo-label">WALLETKU REWARDS</span>
+        <h3>Transaksi lebih praktis!</h3>
+        <p>Nikmati kemudahan mengatur uang setiap hari.</p>
+      </div>
+      <div class="promo-art">✦</div>
+    </section>
+
+    <section class="section" id="transactions">
+      <div class="section-heading">
+        <div>
+          <h2>Transaksi Terbaru</h2>
+          <p class="muted">Pantau aktivitas dompetmu</p>
+        </div>
+        <button class="text-btn" data-action="history">
+          Lihat semua
+        </button>
+      </div>
+
+      <div id="transactionList" class="transaction-list"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Layanan lainnya</h2>
+          <p class="muted">Semua kebutuhan dalam satu tempat</p>
+        </div>
+      </div>
+
+      <div class="services">
+        <button class="service" data-action="pulsa">
+          <span>▤</span> Pulsa
+        </button>
+        <button class="service" data-action="internet">
+          <span>◉</span> Internet
+        </button>
+        <button class="service" data-action="listrik">
+          <span>ϟ</span> Listrik
+        </button>
+        <button class="service" data-action="lainnya">
+          <span>•••</span> Lainnya
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#home" class="nav-item active">
+      <span>⌂</span>Beranda
+    </a>
+    <button class="nav-item" data-action="history">
+      <span>◷</span>Aktivitas
+    </button>
+    <button class="nav-item" data-action="transfer">
+      <span>⇄</span>Transfer
+    </button>
+    <button class="nav-item" data-action="profile">
+      <span>♙</span>Profil
+    </button>
+  </nav>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button id="closeModal" class="close-btn"
+              aria-label="Tutup">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
